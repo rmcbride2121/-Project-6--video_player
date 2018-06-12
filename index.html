@@ -3,14 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>Video Player</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Actor' rel='stylesheet'/>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="js/mediaelement-and-player.min.js"></script>
+    <link rel="stylesheet" href="css/mediaelementplayer.css" />
+    <script src="js/helper.js"></script>
     <link rel="stylesheet" href="css/main.css"/>
   </head>
   <body>
     <!-- //Video -->
-    <video controls>
-      <source src="videos/video.mp4" type="video/mp4">
-      <source src="videos/video.ogg" type="video/ogg">
-    </video>
+    <div class="videocontent">
+      <video controls>
+        <source src="videos/video.mp4" type="video/mp4">
+        <source src="videos/video.ogg" type="video/ogg">
+      </video>
+    </div>
 
     <!-- Paragraphs -->
     <p>
@@ -48,9 +56,11 @@ inside your house, is at your modem.</span>
 to your network at home.</span>
       <span>A few common residential modems are DSL or</span>
     </p>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.9/lang/ca.min.js"></script>
-    <script src="js/helper.js"></script>
+    <!-- <script>
+    $('video').mediaelementplayer({
+      features: ['playpause', 'tracks', 'progress'],
+      startLanguage: 'en'
+    });
+    </script> -->
   </body>
 </html>
